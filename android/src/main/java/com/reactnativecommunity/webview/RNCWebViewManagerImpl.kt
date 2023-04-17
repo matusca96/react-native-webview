@@ -157,6 +157,13 @@ class RNCWebViewManagerImpl {
                             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
                         )
+                        activity.window.setFlags(
+                          WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
+                          WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED
+                        )
+
+                        mWebView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+
                         mVideoView.setBackgroundColor(Color.BLACK)
 
                         // Since RN's Modals interfere with the View hierarchy
